@@ -29,7 +29,7 @@ jobs:
           force: true
       - run:
           command: |
-            heroku run --app=${HEROKU_APP_NAME} php artisan migrate --no-interaction
+            heroku run --app=${HEROKU_APP_NAME} php artisan migrate --env=testing --no-interaction -vvv
 workflows:
   deploy:
     jobs:
